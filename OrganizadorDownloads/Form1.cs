@@ -16,5 +16,10 @@ namespace OrganizadorDownloads
         {
             InitializeComponent();
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

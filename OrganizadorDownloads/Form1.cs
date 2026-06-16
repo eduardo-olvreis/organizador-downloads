@@ -20,11 +20,11 @@ namespace OrganizadorDownloads
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
-            string[] arquivos = Directory.GetFiles(@"C:\Users\eduar\Downloads");
+            string diretorioDownloads = @"C:\Users\eduar\Downloads";
+            string[] arquivos = Directory.GetFiles(diretorioDownloads);
             foreach (string arquivo in arquivos)
             {
-                listBox1.Items.Add(Path.GetFileName(arquivo));
-                listBox2.Items.Add(Path.GetExtension(arquivo).Trim());
+                string nomeArquivo = Path.GetFileName(arquivo);
                 string extensao = Path.GetExtension(arquivo).Trim();
                 string pastaDestino = "";
                 switch (extensao)
@@ -90,7 +90,14 @@ namespace OrganizadorDownloads
                         pastaDestino = "Outros";
                         break;
                 }
+
+                string pathPastaCriada = @"C:\Users\eduar\Downloads\" + pastaDestino;  
+                Directory.CreateDirectory(pathPastaCriada);
+
+                string pathDestino = pathPastaCriada + $@"\{nomeArquivo}";
+                File.Move(arquivo, pathDestino);
             }
+            lblSucesso.Visible = true;
         }
     }
 }

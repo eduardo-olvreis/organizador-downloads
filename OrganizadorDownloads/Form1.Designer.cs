@@ -30,6 +30,8 @@
         {
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.lblPrincipal = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnPrincipal
@@ -51,11 +53,32 @@
             this.lblPrincipal.TabIndex = 1;
             this.lblPrincipal.Text = "Organize seus downloads com apenas 1 clique!";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(201, 424);
+            this.listBox1.TabIndex = 2;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(654, 12);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(134, 424);
+            this.listBox2.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.lblPrincipal);
             this.Controls.Add(this.btnPrincipal);
             this.Name = "Form1";
@@ -69,6 +92,8 @@
 
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Label lblPrincipal;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

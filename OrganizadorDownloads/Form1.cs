@@ -20,7 +20,8 @@ namespace OrganizadorDownloads
 
         private void btnPrincipal_Click(object sender, EventArgs e)
         {
-            string diretorioDownloads = @"C:\Users\eduar\Downloads";
+            string perfilUsuario = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string diretorioDownloads = Path.Combine(perfilUsuario, "Downloads");
             string[] arquivos = Directory.GetFiles(diretorioDownloads);
             foreach (string arquivo in arquivos)
             {
@@ -91,7 +92,7 @@ namespace OrganizadorDownloads
                         break;
                 }
 
-                string pathPastaCriada = @"C:\Users\eduar\Downloads\" + pastaDestino;  
+                string pathPastaCriada = Path.Combine(diretorioDownloads, pastaDestino);
                 Directory.CreateDirectory(pathPastaCriada);
 
                 string pathDestino = pathPastaCriada + $@"\{nomeArquivo}";

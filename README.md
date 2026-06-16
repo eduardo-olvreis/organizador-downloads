@@ -1,5 +1,7 @@
 # 📂 Organizador Automático de Downloads
 
+![Demonstração do Funcionamento](Demonstracao_organizador_downloads-ezgif.com-video-to-gif-converter.gif)
+
 Um utilitário de desktop simples e rápido feito em C# para resolver uma dor que todo mundo tem: a bagunça generalizada na pasta de Downloads do computador. 
 
 Em vez de ficar movendo arquivo por arquivo manualmente, esse programa varre a pasta, identifica o tipo de arquivo pela extensão e joga cada um na sua respectiva pasta (Imagens, Documentos, Executáveis, etc.).
